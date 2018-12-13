@@ -111,4 +111,4 @@ setTimeout(function() {
     var config = { attributes: false, childList: true, subtree: true };
     var observer = new MutationObserver(setColor);
     observer.observe(targetNode, config);
-},5000);
+},10000);
