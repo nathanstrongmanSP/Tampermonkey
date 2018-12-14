@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spiceworks Team Colors
 // @namespace    http://tampermonkey.net/
-// @version      1.3.0
+// @version      1.4.1
 // @description  Adds Team Colors
 // @author       Nathan Strongman nathanstrongman@outlook.com
 // @match        help.starport.ca/*
@@ -83,7 +83,19 @@ GM_addStyle ( `
 function setColor() {
     console.log('Setting colors...');
     // Get all rows containing the team class name
-    var ticket = document.getElementsByClassName("column-c_ticket_supervisor");
+    var helpdeskURL = window.location.hostname;
+    if (helpdeskURL = "help.starport.ca") {
+        //Public help desk team field
+        var ticket = document.getElementsByClassName("column-c_ticket_supervisor");
+    }
+    if (helpdeskURL = "help4.starport.ca") {
+        // Internal help desk team field
+        var ticket = document.getElementsByClassName("column-c_team");
+    }
+    else {
+        console.log('Error: Could not find color field!');
+    }
+    // Get number of rows
     var ticketsTotal = ticket.length;
 
     // Loop through the tickets
