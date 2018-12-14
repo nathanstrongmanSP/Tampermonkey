@@ -83,18 +83,8 @@ GM_addStyle ( `
 function setColor() {
     console.log('Setting colors...');
     // Get all rows containing the team class name
-    var helpdeskURL = window.location.hostname;
-    if (helpdeskURL = "help.starport.ca") {
-        //Public help desk team field
-        var ticket = document.getElementsByClassName("column-c_ticket_supervisor");
-    }
-    if (helpdeskURL = "help4.starport.ca") {
-        // Internal help desk team field
-        var ticket = document.getElementsByClassName("column-c_team");
-    }
-    else {
-        console.log('Error: Could not find color field!');
-    }
+    var ticket = document.getElementsByClassName("column-c_ticket_supervisor");
+    
     // Get number of rows
     var ticketsTotal = ticket.length;
 
