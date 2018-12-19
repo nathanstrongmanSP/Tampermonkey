@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         Spiceworks Team Colors
 // @namespace    http://tampermonkey.net/
-// @version      1.4.5
+// @version      1.4.6
 // @description  Adds Team Colors
 // @author       Nathan Strongman nathanstrongman@outlook.com
 // @match        help.starport.ca/*
-// @match        http://star-dc1-help1/*
 // @match        help4.starport.ca/*
+// @match        star-dc1-help1/*
 // @updateURL    https://raw.githubusercontent.com/det0nat3/tampermonkey/master/SpiceworksTeamColors.user.js
 // @downloadURL  https://raw.githubusercontent.com/det0nat3/tampermonkey/master/SpiceworksTeamColors.user.js
 // @run-at       document-end
@@ -18,6 +18,7 @@ GM_addStyle ( `
     .column-c_ticket_supervisor {
         text-align: center;
         font-weight: bolder;
+        width: 10%;
     }
 
     /*############## Custom additional CSS ##############*/
