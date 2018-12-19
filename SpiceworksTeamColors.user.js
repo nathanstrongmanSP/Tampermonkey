@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spiceworks Team Colors
 // @namespace    http://tampermonkey.net/
-// @version      1.4.4
+// @version      1.4.5
 // @description  Adds Team Colors
 // @author       Nathan Strongman nathanstrongman@outlook.com
 // @match        help.starport.ca/*
