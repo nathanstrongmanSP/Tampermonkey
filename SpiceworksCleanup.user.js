@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spiceworks Cleanup
 // @namespace    http://tampermonkey.net/
-// @version      1.2.2
+// @version      2.0
 // @description  Removes Ads and other junk
 // @author       Nathan Strongman nathanstrongman@outlook.com
 // @match        help.starport.ca/*
@@ -17,21 +17,21 @@
 GM_addStyle ( `
     /* Sidebar & Ads  */
     #sidebar {
-        display: none;
+        display: none !important;
     }
     #content_wrapper {
-        padding-right: 0px;
+        padding-right: 0px !important;
     }
-    body.exlba #exlba {
-        display: none;
+    #exlba {
+        display: none !important;
     }
     /* Remove default padding on ticket box */
     #container{
-        padding: 0;
+        padding: 0 !important;
     }
 
     /* Spiceworks Logo & top bar */
-    header.site-navigation {
-        display: none;
+    .site-navigation {
+        display: none !important;
     }
 ` );

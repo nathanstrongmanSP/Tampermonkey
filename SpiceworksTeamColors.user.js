@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spiceworks Team Colors
 // @namespace    http://tampermonkey.net/
-// @version      1.4.6
+// @version      2.0.0
 // @description  Adds Team Colors
 // @author       Nathan Strongman nathanstrongman@outlook.com
 // @match        help.starport.ca/*
@@ -14,55 +14,35 @@
 // ==/UserScript==
 
 GM_addStyle ( `
-    /* Team column */
-    .column-c_ticket_supervisor {
-        text-align: center;
-        font-weight: bolder;
-        width: 10%;
-    }
-
     /*############## Custom additional CSS ##############*/
+    .selected {
+        color: #f9ff00 !important;
+        font-weight: bolder !important;
+        border: 2px dashed #f9ff00 !important;
+    }
+    .ticket-list {
+        color: #FFFFFF !important;
+    }
 
     /* Teams */
     .teamRed {
-        color: #FFFFFF;
-        background-color:rgba(255, 0, 0, 1);
-        border: 0.5px solid #000000;
-    }
-    .teamRedRow {
-        background-color:rgba(255, 0, 0, 0.3);
+        background-color:rgba(255, 0, 0, 1) !important;
     }
     .teamViolet {
-        color: #FFFFFF;
-        background-color: rgba(157, 0, 255,1);
-        border: 0.5px solid #000000;
-    }
-    .teamVioletRow {
-        background-color: rgba(157, 0, 255,0.3);
+        background-color: rgba(180, 0, 255,1) !important;
     }
     .teamBlue {
-        color: #FFFFFF;
-        background: rgba(0, 0, 255,1);
-        border: 0.5px solid #000000;
-    }
-    .teamBlueRow {
-        background: rgba(0, 0, 255,0.3);
+        background: rgba(0, 0, 255,1) !important;
     }
     .teamBlack {
-        color: #FFFFFF;
-        background: rgba(0, 0, 0,1);
-        border: 0.5px solid #000000;
-    }
-    .teamBlackRow {
-        background: rgba(0, 0, 0,0.3);
+        background: rgba(0, 0, 0,1) !important;
     }
     .rainbow {
-        background: linear-gradient(90deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+        background: linear-gradient(90deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3) !important;
+    /*
         background-size: 200% 200%;
         animation: rainbow 10s ease infinite;
-    }
-    .rainbowRow {
-        background: linear-gradient(90deg, rgba(255, 36, 0,0.3), rgba(232, 29, 29,0.3), rgba(232, 183, 29,0.3), rgba(227, 232, 29,0.3), rgba(29, 232, 64,0.3), rgba(29, 221, 232,0.3), rgba(43, 29, 232,0.3), rgba(221, 0, 243,0.3), rgba(221, 0, 243,0.3));
+    */
     }
 
     /* Animations */
@@ -71,7 +51,6 @@ GM_addStyle ( `
         50%{background-position:100% 19%}
         100%{background-position:0% 82%}
     }
-
     .blink {
         animation: blink 3s ease-out infinite;
     }
@@ -86,27 +65,27 @@ function setColor() {
     console.log('Setting colors...');
     // Get all rows containing the team class name
     var ticket = document.getElementsByClassName("column-c_ticket_supervisor");
-    
+
     // Get number of rows
     var ticketsTotal = ticket.length;
 
-    // Loop through the tickets
+    // Loop through the tickets, skip first result as it's the column header
     for (var i = 1; i < ticketsTotal; i++) {
         // Get team color
         var teamColor = ticket.item(i).innerText;
 
         // Team Rules
         if (teamColor) {
-            ticket.item(i).classList.remove("rainbow");
-            ticket.item(i).parentElement.classList.remove("rainbowRow");
+            // ticket.item(i).classList.remove("rainbow"); //Broken
+            ticket.item(i).parentElement.classList.remove("rainbow");
 
-            ticket.item(i).classList.add("team"+teamColor);
-            ticket.item(i).parentElement.classList.add("team"+teamColor+"Row");
-            ticket.item(i).classList.add("blink");
+            // ticket.item(i).classList.add("team"+teamColor); //Broken
+            ticket.item(i).parentElement.classList.add("team"+teamColor);
+            // ticket.item(i).classList.add("blink");
         }
         else{
-            ticket.item(i).classList.add("rainbow");
-            ticket.item(i).parentElement.classList.add("rainbowRow");
+            // ticket.item(i).classList.add("rainbow");
+            ticket.item(i).parentElement.classList.add("rainbow");
         }
     }
 }

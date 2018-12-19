@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spiceworks Dashboard
 // @namespace    http://tampermonkey.net/
-// @version      1.2.2
+// @version      2.0.0
 // @description  Starport Spiceworks dashboard
 // @author       Nathan Strongman nathanstrongman@outlook.com
 // @match        help.starport.ca/*
@@ -16,22 +16,60 @@
 GM_addStyle ( `
     /* "New Ticket" & "Refresh Ticket" buttons */
     .sui-bttn-toolbar{
-        display: none;
+        display: none !important;
     }
     /* Search Box */
     .page-search {
-        display: none;
+        display: none !important;
     }
     /* Ticket Table  */
     .ticket-table-wrapper {
-        height: 600px;
+        height: 600px !important;
     }
     /* Bottom ticket Pane */
-    .sui-opt-in .helpdesk-app .ticket-pane {
-        display: none;
+    .ticket-pane {
+        display: none !important;
     }
     /* Table scroll bars */
-    .sui-opt-in .helpdesk-app .ticket-grid .table-body .ticket-table-wrapper {
-        overflow: hidden;
+    .ticket-table-wrapper {
+        overflow: hidden !important;
+    }
+    /* Footer */
+    .table-footer {
+        display: none !important;
+    }
+    .selected {
+        border: none !important;
+        color: #FFFFFF !important;
+        font-weight: normal !important;
+    }
+
+    /* Dark Mode */
+    html {
+        background: #232323 !important;
+    }
+    .sui-body {
+        background-color: #232323 !important;
+    }
+    .helpdesk-app {
+        border: none !important;
+    }
+    .page-header h1{
+        color: #FFFFFF !important;
+    }
+    .table-header {
+        background: #232323 !important;
+    }
+    .table-footer{
+        background: #232323 !important;
+    }
+    .helpdesk-app {
+        border: none !important;
+    }
+    tr {
+        border-left: none !important;
+    }
+    .ticket-table-wrapper {
+        background-color: #232323 !important;
     }
 ` );
