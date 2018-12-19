@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name         Spiceworks Dashboard
+// @name         Spiceworks 3-Dashboard
 // @namespace    http://tampermonkey.net/
-// @version      2.3
+// @version      2.4
 // @description  Starport Spiceworks dashboard
 // @author       Nathan Strongman nathanstrongman@outlook.com
 // @match        help.starport.ca/tickets/*
 // @match        star-dc1-help1/tickets/*
 // @updateURL    https://raw.githubusercontent.com/det0nat3/tampermonkey/master/SpiceworksDashboard.user.js
 // @downloadURL  https://raw.githubusercontent.com/det0nat3/tampermonkey/master/SpiceworksDashboard.user.js
-// @run-at       document-end
+// @run-at       document-body
 // @grant        GM_addStyle
 // ==/UserScript==
 

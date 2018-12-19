@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Spiceworks Team Colors
+// @name         Spiceworks 2-Team Colors
 // @namespace    http://tampermonkey.net/
-// @version      2.0.3
+// @version      2.0.5
 // @description  Adds Team Colors
 // @author       Nathan Strongman nathanstrongman@outlook.com
 // @match        help.starport.ca/tickets/*
@@ -21,6 +21,7 @@ GM_addStyle ( `
     }
     .ticket-list {
         color: #FFFFFF !important;
+        font-weight: bolder !important;
     }
 
     /* Teams */
@@ -38,7 +39,6 @@ GM_addStyle ( `
     }
     .rainbow {
         color: #000000 !important;
-        font-weight: bolder !important;
         background: linear-gradient(90deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3) !important;
     /*
         background-size: 200% 200%;
