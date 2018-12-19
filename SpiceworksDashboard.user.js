@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spiceworks Dashboard
 // @namespace    http://tampermonkey.net/
-// @version      2.0.0
+// @version      2.1
 // @description  Starport Spiceworks dashboard
 // @author       Nathan Strongman nathanstrongman@outlook.com
 // @match        help.starport.ca/*
@@ -24,7 +24,10 @@ GM_addStyle ( `
     }
     /* Ticket Table  */
     .ticket-table-wrapper {
-        height: 600px !important;
+        height: 200px !important;
+    }
+    #content {
+        min-height: 100px !important;
     }
     /* Bottom ticket Pane */
     .ticket-pane {
@@ -36,6 +39,9 @@ GM_addStyle ( `
     }
     /* Footer */
     .table-footer {
+        display: none !important;
+    }
+    #footer {
         display: none !important;
     }
     .selected {
