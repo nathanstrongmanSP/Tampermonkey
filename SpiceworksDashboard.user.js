@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         Spiceworks 3-Dashboard
 // @namespace    http://tampermonkey.net/
-// @version      2.4
+// @version      2.5.0
 // @description  Starport Spiceworks dashboard
 // @author       Nathan Strongman nathanstrongman@outlook.com
 // @match        help.starport.ca/tickets/*
 // @match        star-dc1-help1/tickets/*
 // @updateURL    https://raw.githubusercontent.com/det0nat3/tampermonkey/master/SpiceworksDashboard.user.js
 // @downloadURL  https://raw.githubusercontent.com/det0nat3/tampermonkey/master/SpiceworksDashboard.user.js
-// @run-at       document-body
+// @run-at       document-end
 // @grant        GM_addStyle
 // ==/UserScript==
 
@@ -46,7 +46,6 @@ GM_addStyle ( `
     .selected {
         border: none !important;
         color: #FFFFFF !important;
-        font-weight: normal !important;
     }
 
     /* Dark Mode */
@@ -76,5 +75,9 @@ GM_addStyle ( `
     }
     .ticket-table-wrapper {
         background-color: #232323 !important;
+    }
+    .ticket-list {
+        color: #FFFFFF !important;
+        font-weight: bold !important;
     }
 ` );
