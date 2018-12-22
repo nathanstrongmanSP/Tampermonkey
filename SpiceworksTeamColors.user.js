@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spiceworks 2-Team Colors
 // @namespace    http://tampermonkey.net/
-// @version      2.0.6
+// @version      2.0.7
 // @description  Adds Team Colors
 // @author       Nathan Strongman nathanstrongman@outlook.com
 // @match        help.starport.ca/tickets/*
@@ -22,20 +22,20 @@ GM_addStyle ( `
 
     /* Teams */
     .teamRed {
-        color: #FFFFFF !important;
-        background-color:rgba(255, 0, 0, 1) !important;
+        color: #ffffff !important;
+        background-color: #ff0000 !important;
     }
     .teamViolet {
-        color: #FFFFFF !important;
-        background-color: rgba(180, 0, 255,1) !important;
+        color: #ffffff !important;
+        background-color: #ad00e6 !important;
     }
     .teamBlue {
-        color: #FFFFFF !important;
-        background: rgba(0, 0, 255,1) !important;
+        color: #ffffff !important;
+        background: #0000ff !important;
     }
     .teamBlack {
-        color: #FFFFFF !important;
-        background: rgba(0, 0, 0,1) !important;
+        color: #ffffff !important;
+        background: #000000 !important;
     }
     .rainbow {
         color: #000000 !important;
@@ -81,4 +81,4 @@ setTimeout(function() {
     var observer = new MutationObserver(setColor);
     observer.observe(targetNode, config);
     setColor();
-},10000);
+},5000);
