@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spiceworks 3-Dashboard
 // @namespace    http://tampermonkey.net/
-// @version      2.5.0
+// @version      2.5.1
 // @description  Starport Spiceworks dashboard
 // @author       Nathan Strongman nathanstrongman@outlook.com
 // @match        help.starport.ca/tickets/*
@@ -51,6 +51,7 @@ GM_addStyle ( `
     /* Dark Mode */
     html {
         background: #232323 !important;
+        cursor: none !important;
     }
     .sui-body {
         background-color: #232323 !important;
