@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spiceworks 2-Team Colors
 // @namespace    http://tampermonkey.net/
-// @version      2.0.7
+// @version      2.0.8
 // @description  Adds Team Colors
 // @author       Nathan Strongman nathanstrongman@outlook.com
 // @match        help.starport.ca/tickets/*
@@ -81,4 +81,4 @@ setTimeout(function() {
     var observer = new MutationObserver(setColor);
     observer.observe(targetNode, config);
     setColor();
-},5000);
+},7000);
