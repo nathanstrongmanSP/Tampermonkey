@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         Spiceworks 2-Team Colors
 // @namespace    http://tampermonkey.net/
-// @version      2.0.8
+// @version      2.0.9
 // @description  Adds Team Colors
-// @author       Nathan Strongman nathanstrongman@outlook.com
+// @author       Nathan Strongman
 // @match        help.starport.ca/tickets/*
+// @match        help4.starport.ca/tickets/*
 // @match        star-dc1-help1/tickets/*
+// @match        sp-lab-help4
 // @updateURL    https://raw.githubusercontent.com/det0nat3/tampermonkey/master/SpiceworksTeamColors.user.js
 // @downloadURL  https://raw.githubusercontent.com/det0nat3/tampermonkey/master/SpiceworksTeamColors.user.js
 // @run-at       document-end
@@ -47,32 +49,25 @@ function setColor() {
     console.log('Setting colors...');
     // Get all rows containing the team class name
     var ticket = document.getElementsByClassName("column-c_ticket_supervisor");
-
+    var ticket = document.getElementsByClassName("column-c_team");
     // Get number of rows
     var ticketsTotal = ticket.length;
-
     // Loop through the tickets, skip first result as it's the column header
     for (var i = 1; i < ticketsTotal; i++) {
         // Get team color
         var teamColor = ticket.item(i).innerText;
-
         // Team Rules
         if (teamColor) {
-            // ticket.item(i).classList.remove("rainbow"); //Broken
             ticket.item(i).parentElement.classList.remove("rainbow");
-
-            // ticket.item(i).classList.add("team"+teamColor); //Broken
             ticket.item(i).parentElement.classList.add("team"+teamColor);
-            // ticket.item(i).classList.add("blink");
         }
         else{
-            // ticket.item(i).classList.add("rainbow");
             ticket.item(i).parentElement.classList.add("rainbow");
         }
     }
 }
 
-// We have to delay this because spiceworks is slow
+// We have to delay this because spiceworks is slow to load
 setTimeout(function() {
     console.log('Checking for changes now...')
     // https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver
@@ -81,4 +76,4 @@ setTimeout(function() {
     var observer = new MutationObserver(setColor);
     observer.observe(targetNode, config);
     setColor();
-},7000);
+},10000);
