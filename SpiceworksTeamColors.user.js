@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spiceworks 2-Team Colors
 // @namespace    http://tampermonkey.net/
-// @version      2.0.10
+// @version      2.0.11
 // @description  Adds Team Colors
 // @author       Nathan Strongman
 // @match        help.starport.ca/tickets/*
@@ -48,7 +48,7 @@ GM_addStyle ( `
 function setColor() {
     console.log('Setting colors...');
     // Get all rows containing the team class name
-    if (window.location.hostname == 'help4.starport.ca', window.location.hostname == 'sp-lab-help4') {
+    if (window.location.hostname == 'help4.starport.ca'| window.location.hostname == 'sp-lab-help4') {
         var ticket = document.getElementsByClassName("column-c_team");
     }
     else{
