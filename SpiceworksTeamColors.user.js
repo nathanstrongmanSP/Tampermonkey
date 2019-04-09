@@ -48,8 +48,13 @@ GM_addStyle ( `
 function setColor() {
     console.log('Setting colors...');
     // Get all rows containing the team class name
-    var ticket = document.getElementsByClassName("column-c_ticket_supervisor");
-    var ticket = document.getElementsByClassName("column-c_team");
+    if (window.location.hostname == 'help4.starport.ca', window.location.hostname == 'sp-lab-help4') {
+        var ticket = document.getElementsByClassName("column-c_team");
+    }
+    else{
+        ticket = document.getElementsByClassName("column-c_ticket_supervisor");
+    }
+
     // Get number of rows
     var ticketsTotal = ticket.length;
     // Loop through the tickets, skip first result as it's the column header
