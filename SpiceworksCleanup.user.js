@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Spiceworks 1-Cleanup
 // @namespace    http://tampermonkey.net/
-// @version      2.4
+// @version      2.5
 // @description  Removes Ads and other junk
-// @author       Nathan Strongman
+// @author       Nathan Strongman (nathan.strongman@starport.ca)
 // @match        help.starport.ca/tickets/*
 // @match        help4.starport.ca/tickets/*
 // @match        help.cyber724.com/tickets/*
