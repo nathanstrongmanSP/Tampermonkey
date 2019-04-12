@@ -1,6 +1,8 @@
 # Tamper Monkey Scripts
 *A collection of custom scripts for Tamper Monkey, see below for descriptions.*
 
+Team Colors and Dashboard require that the "**Team**" column be shown.
+
 ---
 #### Spiceworks Scripts
 - **SpiceworksCleanup.user.js** - *Removes ads, logos and fills Ticket box to window width.*
