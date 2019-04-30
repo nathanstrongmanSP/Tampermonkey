@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         Spiceworks 2-Team Colors
 // @namespace    http://tampermonkey.net/
-// @version      2.1.2
+// @version      2.1.3
 // @description  Adds Team Colors
 // @author       Nathan Strongman (nathan.strongman@starport.ca)
 // @match        help.starport.ca/tickets/*
 // @match        help4.starport.ca/tickets/*
 // @match        star-dc1-help1/tickets/*
-// @match        sp-lab-help4
+// @match        sp-lab-help4/tickets/*
 // @updateURL    https://raw.githubusercontent.com/nathanstrongmanSP/Tampermonkey/master/SpiceworksTeamColors.user.js
 // @downloadURL  https://raw.githubusercontent.com/nathanstrongmanSP/Tampermonkey/master/SpiceworksTeamColors.user.js
 // @run-at       document-end
