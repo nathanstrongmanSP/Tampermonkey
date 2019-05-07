@@ -5,8 +5,8 @@
 // @description  Bring back the darkness!
 // @author       Nathan Strongman (nathan.strongman@starport.ca)
 // @match        starport.itglue.com/*
-// @updateURL    https://raw.githubusercontent.com/nathanstrongmanSP/Tampermonkey/master/ITGlueTheme.js
-// @downloadURL  https://raw.githubusercontent.com/nathanstrongmanSP/Tampermonkey/master/ITGlueTheme.js
+// @updateURL    https://github.com/nathanstrongmanSP/Tampermonkey/raw/master/ITGlueTheme.js
+// @downloadURL  https://github.com/nathanstrongmanSP/Tampermonkey/raw/master/ITGlueTheme.js
 // @run-at       document-start
 // @grant        GM_addStyle
 // ==/UserScript==
