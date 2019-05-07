@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         IT-Glue Theme
+// @name         ITGlue Theme
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  Bring back the darkness!
