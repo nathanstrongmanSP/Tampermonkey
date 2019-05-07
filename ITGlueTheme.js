@@ -4,7 +4,7 @@
 // @version      1.0
 // @description  Bring back the darkness!
 // @author       Nathan Strongman (nathan.strongman@starport.ca)
-// @match        starport.itglue.com
+// @match        starport.itglue.com/*
 // @updateURL    https://github.com/nathanstrongmanSP/Tampermonkey/raw/master/ITGlueTheme.js
 // @downloadURL  https://github.com/nathanstrongmanSP/Tampermonkey/raw/master/ITGlueTheme.js
 // @run-at       document-start
