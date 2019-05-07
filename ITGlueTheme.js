@@ -7,6 +7,7 @@
 // @match        starport.itglue.com
 // @updateURL    https://github.com/nathanstrongmanSP/Tampermonkey/raw/master/ITGlueTheme.js
 // @downloadURL  https://github.com/nathanstrongmanSP/Tampermonkey/raw/master/ITGlueTheme.js
+// @run-at       document-start
 // @grant        GM_addStyle
 // ==/UserScript==
 
