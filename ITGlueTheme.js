@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ITGlue Theme
 // @namespace    http://tampermonkey.net/
-// @version      1.2
+// @version      1.3
 // @description  Bring back the darkness!
 // @author       Nathan Strongman (nathan.strongman@starport.ca)
 // @match        starport.itglue.com/*
