@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spiceworks 3-Dashboard
 // @namespace    http://tampermonkey.net/
-// @version      2.6.1
+// @version      2.6.2
 // @description  Starport Spiceworks dashboard
 // @author       Nathan Strongman (nathan.strongman@starport.ca)
 // @match        help.starport.ca/tickets/*
@@ -90,7 +90,7 @@ h1[0].innerHTML = h1HTML;
 
 setInterval(function(){
     console.log('Making some noise if tickets exist...')
-    ticket = document.getElementsByClassName("column-id");
+    var ticket = document.getElementsByClassName("column-id");
     if (ticket.length > 1) {
         var audio = new Audio('https://notificationsounds.com/message-tones/to-the-point-568/download/mp3');
     audio.play();
