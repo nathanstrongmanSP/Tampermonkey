@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spiceworks 3-Dashboard
 // @namespace    http://tampermonkey.net/
-// @version      2.7.1
+// @version      2.7.2
 // @description  Starport Spiceworks dashboard
 // @author       Nathan Strongman (nathan.strongman@starport.ca)
 // @match        help.starport.ca/tickets/*
@@ -112,4 +112,4 @@ setInterval(function(){
         audio.play();
         }
     }
-}, 60000);
+}, 120000);
