@@ -102,14 +102,19 @@ function activeHours()
     }
 
 }
+// Timer for noise loop
+var minutes = 5;
+var timer = minutes * 60000;
+
 setInterval(function(){
     if (activeHours())
     {
         console.log('Making some noise if tickets exist...')
         var ticket = document.getElementsByClassName("column-id");
         if (ticket.length > 1) {
-            var audio = new Audio('https://notificationsounds.com/message-tones/to-the-point-568/download/mp3');
+            // var audio = new Audio('https://notificationsounds.com/message-tones/to-the-point-568/download/mp3');
+            var audio = new Audio('https://www.myinstants.com/media/sounds/tindeck_1.mp3');
         audio.play();
         }
     }
-}, 120000);
+}, timer);
