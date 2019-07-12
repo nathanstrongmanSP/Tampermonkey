@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spiceworks 4-InternalDashboard
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0
+// @version      1.0.4
 // @description  Starport Spiceworks internal dashboard
 // @author       Nathan Strongman (nathan.strongman@starport.ca)
 // @match        help4.starport.ca/tickets/*
@@ -13,6 +13,9 @@
 // ==/UserScript==
 
 GM_addStyle ( `
+    body {
+        overflow: hidden !important;
+    }
     /* "New Ticket" & "Refresh Ticket" buttons */
     .sui-bttn-toolbar{
         display: none !important;
@@ -23,7 +26,8 @@ GM_addStyle ( `
     }
     /* Ticket Table  */
     .ticket-table-wrapper {
-        height: 800px !important;
+        height: 1000px !important;
+        overflow: hidden !important;
     }
     #content {
         min-height: 100px !important;
