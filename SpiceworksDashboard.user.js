@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spiceworks 3-Dashboard
 // @namespace    http://tampermonkey.net/
-// @version      2.7.3
+// @version      2.7.4
 // @description  Starport Spiceworks dashboard
 // @author       Nathan Strongman (nathan.strongman@starport.ca)
 // @match        help.starport.ca/tickets/*
@@ -13,6 +13,14 @@
 // ==/UserScript==
 
 GM_addStyle ( `
+    body {
+        overflow: hidden !important;
+    }
+    .sui-body-shadow {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
     /* "New Ticket" & "Refresh Ticket" buttons */
     .sui-bttn-toolbar{
         display: none !important;
@@ -23,7 +31,7 @@ GM_addStyle ( `
     }
     /* Ticket Table  */
     .ticket-table-wrapper {
-        height: 200px !important;
+        height: 1000px !important;
     }
     #content {
         min-height: 100px !important;
@@ -85,7 +93,7 @@ GM_addStyle ( `
 
 var header = document.getElementsByClassName('page-header');
 var h1 = header[0].getElementsByTagName("h1");
-var h1HTML = h1[0].innerHTML.replace("Tickets <","<");
+var h1HTML = h1[0].innerHTML.replace("Tickets <","Public Helpdesk <");
 h1[0].innerHTML = h1HTML;
 
 // Only make noise 9-9 Mon-Fri
