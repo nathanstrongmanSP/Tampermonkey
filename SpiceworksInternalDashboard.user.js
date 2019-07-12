@@ -6,8 +6,8 @@
 // @author       Nathan Strongman (nathan.strongman@starport.ca)
 // @match        help4.starport.ca/tickets/*
 // @match        sp-lab-help4/tickets/*
-// @updateURL    https://raw.githubusercontent.com/nathanstrongmanSP/Tampermonkey/master/SpiceworksDashboard.user.js
-// @downloadURL  https://raw.githubusercontent.com/nathanstrongmanSP/Tampermonkey/master/SpiceworksDashboard.user.js
+// @updateURL    https://raw.githubusercontent.com/nathanstrongmanSP/Tampermonkey/master/SpiceworksInternalDashboard.user.js
+// @downloadURL  https://raw.githubusercontent.com/nathanstrongmanSP/Tampermonkey/master/SpiceworksInternalDashboard.user.js
 // @run-at       document-end
 // @grant        GM_addStyle
 // ==/UserScript==
