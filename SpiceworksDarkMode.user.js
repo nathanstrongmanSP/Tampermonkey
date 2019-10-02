@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spiceworks Dark-Mode
 // @namespace    http://tampermonkey.net/
-// @version      1.1.1
+// @version      1.1.2
 // @description  Starport Spiceworks darkmode
 // @author       Nathan Strongman (nathan.strongman@starport.ca)
 // @match        help.starport.ca/tickets/*
@@ -67,7 +67,7 @@ GM_addStyle ( `
 
     /* Fonts */
     .sui-opt-in h1, .sui-opt-in h2, .sui-opt-in h3, .sui-opt-in h4, .sui-opt-in h5, .sui-opt-in h6 {
-        color: ##e8e8e8;;
+        color: #e8e8e8;;
     }
 
     /* Ticket Pane */
