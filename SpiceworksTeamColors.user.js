@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spiceworks 2-Team Colors
 // @namespace    http://tampermonkey.net/
-// @version      2.1.3
+// @version      2.1.4
 // @description  Adds Team Colors
 // @author       Nathan Strongman (nathan.strongman@starport.ca)
 // @match        help.starport.ca/tickets/*
