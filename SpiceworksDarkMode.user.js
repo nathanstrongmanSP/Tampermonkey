@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         Spiceworks Dark-Mode
 // @namespace    http://tampermonkey.net/
-// @version      1.1.0
+// @version      1.1.1
 // @description  Starport Spiceworks darkmode
 // @author       Nathan Strongman (nathan.strongman@starport.ca)
 // @match        help.starport.ca/tickets/*
+// @match        help4.starport.ca/tickets/*
 // @match        star-dc1-help1/tickets/*
+// @match        sp-lab-help4/tickets/*
 // @updateURL    https://raw.githubusercontent.com/nathanstrongmanSP/Tampermonkey/master/SpiceworksDarkMode.user.js
 // @downloadURL  https://raw.githubusercontent.com/nathanstrongmanSP/Tampermonkey/master/SpiceworksDarkMode.user.js
 // @run-at       document-end
