@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spiceworks 1-Cleanup
 // @namespace    http://tampermonkey.net/
-// @version      2.7
+// @version      2.8
 // @description  Removes Ads and other junk
 // @author       Nathan Strongman (nathan.strongman@starport.ca)
 // @match        help.starport.ca/tickets/*
@@ -32,8 +32,11 @@ GM_addStyle ( `
     }
 
     /* Spiceworks Logo & top bar */
-    .site-navigation {
+    .global-nav {
         display: none !important;
+    }
+    .domestic-nav.affix-top {
+        position: inherit !important;
     }
     .platform-app-icon.helpdesk-icon:after {
         content: url("https://starport.ca/wp-content/uploads/2015/12/starport-star-32.png") !important;
