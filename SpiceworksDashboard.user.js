@@ -15,6 +15,7 @@
 GM_addStyle ( `
     body {
         overflow: hidden !important;
+        height: 1201px;
     }
     .sui-body-shadow {
         -moz-box-shadow: none !important;
@@ -130,38 +131,3 @@ setInterval(function(){
         }
     }
 }, timer);
-
-
-// Tablet full screen mode
-function setFullScreen(el) {
-
-    if (el.requestFullscreen) {
-        el.requestFullscreen();
-    } else if (el.msRequestFullscreen) {
-        el.msRequestFullscreen();
-    }else if (el.mozRequestFullScreen) {
-        el.mozRequestFullScreen();
-    }else if (el.webkitRequestFullscreen) {
-        el.webkitRequestFullscreen();
-    }
-}
-
-function exitFullScreen(){
-    if (document.exitFullscreen) {
-        document.exitFullscreen();
-    } else if (document.msExitFullscreen) {
-        document.msExitFullscreen();
-    }else if (document.mozCancelFullScreen) {
-        document.mozCancelFullScreen();
-    }else if (document.webkitCancelFullScreen) {
-        document.webkitCancelFullScreen();
-    }
-}
-
-function toggleFullScreen(){
-    if(!document.fullscreenElement && !document.msFullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement){
-        setFullScreen(document.documentElement);
-    }else{
-        exitFullScreen();
-    }
-}
