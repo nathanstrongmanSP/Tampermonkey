@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Spiceworks 3-Dashboard
 // @namespace    http://tampermonkey.net/
-// @version      2.7.4
+// @version      2.8.0
 // @description  Starport Spiceworks dashboard
 // @author       Nathan Strongman (nathan.strongman@starport.ca)
 // @match        help.starport.ca/tickets/*
@@ -126,3 +126,38 @@ setInterval(function(){
         }
     }
 }, timer);
+
+
+// Tablet full screen mode
+function setFullScreen(el) {
+
+    if (el.requestFullscreen) {
+        el.requestFullscreen();
+    } else if (el.msRequestFullscreen) {
+        el.msRequestFullscreen();
+    }else if (el.mozRequestFullScreen) {
+        el.mozRequestFullScreen();
+    }else if (el.webkitRequestFullscreen) {
+        el.webkitRequestFullscreen();
+    }
+}
+
+function exitFullScreen(){
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+    } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+    }else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+    }else if (document.webkitCancelFullScreen) {
+        document.webkitCancelFullScreen();
+    }
+}
+
+function toggleFullScreen(){
+    if(!document.fullscreenElement && !document.msFullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement){
+        setFullScreen(document.documentElement);
+    }else{
+        exitFullScreen();
+    }
+}
