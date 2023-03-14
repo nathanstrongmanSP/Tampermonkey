@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Datto Cloud Continuity Screenshot
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Allows you to get the full screenshot of the Datto CC agent
 // @author       Nathan Strongman nathan.strongman@starport.ca
 // @match        https://portal.dattobackup.com/status/cloud-continuity
