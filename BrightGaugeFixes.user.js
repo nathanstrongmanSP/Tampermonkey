@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BrightGauge Fixes
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      2.0
 // @description  Add missing features that should be there...
 // @author       Nathan Strongman nathan.strongman@starport.ca
 // @match        https://sp.brightgauge.co/public/dashboards/*
