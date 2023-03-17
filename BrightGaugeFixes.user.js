@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BrightGauge Fixes
 // @namespace    http://tampermonkey.net/
-// @version      2.0
+// @version      2.1
 // @description  Add missing features that should be there...
 // @author       Nathan Strongman nathan.strongman@starport.ca
 // @match        https://sp.brightgauge.co/public/dashboards/*
@@ -12,7 +12,9 @@
 // @grant        GM_addStyle
 // ==/UserScript==
 
-GM_addStyle('.dashboards .container-fluid { overflow-y: hidden !important; }');
+GM_addStyle('.dashboards .container-fluid::-webkit-scrollbar { display: none; !important; }');
+GM_addStyle('.dashboards .container-fluid {-ms-overflow-style: none;}');
+GM_addStyle('.dashboards .container-fluid {scrollbar-width: none;}');
 
 (function() {
     'use strict';
